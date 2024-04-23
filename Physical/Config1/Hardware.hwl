@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="04/19/2024 18:24:49" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="4PPC70_101G_20B" Type="4PPC70.101G-20B" X="85" Y="85" />
+    <Module Name="8MSA2M.R0-42" Type="8MSA2M.R0-42" X="278" Y="493" />
+    <Module Name="8V1010.00-2" Type="8V1010.00-2" X="278" Y="263" />
+    <Module Name="8AC122.60-2" Type="8AC122.60-2" X="292" Y="378.5" />
+    <Module Name="8AC114.60-2" Type="8AC114.60-2" X="280.8" Y="378.5" />
+    <Module Name="8V1010.00-2a" Type="8V1010.00-2" X="398" Y="263" />
+    <Module Name="8AC120.60-1" Type="8AC120.60-1" X="412" Y="378.5" />
+    <Module Name="8AC114.60-2a" Type="8AC114.60-2" X="400.8" Y="378.5" />
+    <Module Name="8MSA2M.E4-42" Type="8MSA2M.E4-42" X="398" Y="493" />
+  </Modules>
+  <Links>
+    <Link From="4PPC70_101G_20B" To="8AC114.60-2" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="157.6" Y="209.4" />
+      <Point X="157.6" Y="209.4" />
+      <Point X="157.6" Y="214.4" />
+      <Point X="157.6" Y="406.7" />
+      <Point X="278.1" Y="406.7" />
+      <Point X="287.1" Y="406.7" />
+      <Point X="287.1" Y="406.7" />
+    </Link>
+    <Link From="8AC114.60-2" To="8AC114.60-2a" FromPort="PLK2" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="287.1" Y="416.5" />
+      <Point X="287.1" Y="416.5" />
+      <Point X="278.1" Y="416.5" />
+      <Point X="265" Y="416.5" />
+      <Point X="265" Y="455" />
+      <Point X="325" Y="455" />
+      <Point X="325" Y="416.5" />
+      <Point X="398.1" Y="416.5" />
+      <Point X="407.1" Y="416.5" />
+      <Point X="407.1" Y="416.5" />
+    </Link>
+    <Link From="8AC120.60-1" To="8MSA2M.E4-42" FromPort="EC" ToPort="EC" IsRoutedByUser="False">
+      <Point X="418.300018" Y="416.5" />
+      <Point X="418.300018" Y="416.5" />
+      <Point X="418.300018" Y="443.5" />
+      <Point X="419.7" Y="443.5" />
+      <Point X="419.7" Y="492.4" />
+      <Point X="419.7" Y="499.4" />
+      <Point X="419.7" Y="499.4" />
+    </Link>
+    <Link From="8AC122.60-2" To="8MSA2M.R0-42" FromPort="EC" ToPort="EC" IsRoutedByUser="False">
+      <Point X="299.7" Y="499.4" />
+      <Point X="299.7" Y="499.4" />
+      <Point X="299.7" Y="492.4" />
+      <Point X="298.300018" Y="492.4" />
+      <Point X="298.300018" Y="444.3" />
+      <Point X="298.300018" Y="419.3" />
+      <Point X="298.300018" Y="419.3" />
+    </Link>
+    <Link From="8MSA2M.E4-42" To="8V1010.00-2a" FromPort="MT" ToPort="MT1" IsRoutedByUser="False">
+      <Point X="429.5" Y="438.9" />
+      <Point X="429.5" Y="438.9" />
+      <Point X="429.5" Y="443.9" />
+      <Point X="429.5" Y="455" />
+      <Point X="447.7" Y="455" />
+      <Point X="447.7" Y="492.4" />
+      <Point X="447.7" Y="499.4" />
+      <Point X="447.7" Y="499.4" />
+    </Link>
+    <Link From="8MSA2M.R0-42" To="8V1010.00-2" FromPort="MT" ToPort="MT1" IsRoutedByUser="False">
+      <Point X="327.7" Y="499.4" />
+      <Point X="327.7" Y="499.4" />
+      <Point X="327.7" Y="492.4" />
+      <Point X="327.7" Y="485" />
+      <Point X="309.5" Y="485" />
+      <Point X="309.5" Y="443.9" />
+      <Point X="309.5" Y="438.9" />
+      <Point X="309.5" Y="438.9" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>
