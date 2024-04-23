@@ -5,7 +5,9 @@
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
-    <Task Name="AxisCtrl" Source="AxisCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="AxisCtrl" Source="SOURCE.Axis.AxisCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="VisuCtrl" Source="SOURCE.Visu.VisuCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="MainCtrl" Source="SOURCE.MainCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -16,10 +18,10 @@
   </DataObjects>
   <NcDataObjects>
     <NcDataObject Name="acp10etxen" Source="acp10etxen.dob" Memory="UserROM" Language="Ett" />
-    <NcDataObject Name="gAxis03a" Source="gAxis03obj.gAxis03a.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gAxis03i" Source="gAxis03obj.gAxis03i.dob" Memory="UserROM" Language="Ax" />
-    <NcDataObject Name="gAxis04a" Source="gAxis04obj.gAxis04a.dob" Memory="UserROM" Language="Apt" />
-    <NcDataObject Name="gAxis04i" Source="gAxis04obj.gAxis04i.dob" Memory="UserROM" Language="Ax" />
+    <NcDataObject Name="gAxis01a" Source="gAxis01obj.gAxis01a.dob" Memory="UserROM" Language="Apt" />
+    <NcDataObject Name="gAxis01i" Source="gAxis01obj.gAxis01i.dob" Memory="UserROM" Language="Ax" />
+    <NcDataObject Name="gAxis02a" Source="gAxis02obj.gAxis02a.dob" Memory="UserROM" Language="Apt" />
+    <NcDataObject Name="gAxis02i" Source="gAxis02obj.gAxis02i.dob" Memory="UserROM" Language="Ax" />
   </NcDataObjects>
   <Binaries>
     <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />

@@ -1,8 +1,12 @@
 VAR
-	gAxis03 : ACP10AXIS_typ;
-	gAxis04 : ACP10AXIS_typ;
-	gAxis01 : ACP10AXIS_typ;
-	gAxis02 : ACP10AXIS_typ;
-	gVAxis01 : ACP10VAXIS_typ;
-	gVAxis02 : ACP10VAXIS_typ;
+	gAxis01 : ACP10AXIS_typ; (*Slave Axis*)
+	gAxis02 : ACP10AXIS_typ; (*Master Axis*)
+	gVAxis01 : ACP10VAXIS_typ; (*Virtual Axis*)
+	gVAxis02 : ACP10VAXIS_typ; (*Virtual Axis*)
+	MpAxisSlave : MpAxisBasic; (*FB for Slave*)
+	MpAxisMaster : MpAxisBasic; (*FB for Master*)
+	MpAxisCamSequencer_0 : MpAxisCamSequencer; (*Cam Sequencer FB*)
+	CamSeqPara : MpAxisCamSequencerParType; (*Cam Sequence Parameter*)
+	SlavePara : MpAxisBasicParType; (*Slave Axis Parameter*)
+	MasterPara : MpAxisBasicParType; (*Master Axis Parameter*)
 END_VAR

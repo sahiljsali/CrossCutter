@@ -5,7 +5,5 @@
     <File Description="Init, cyclic, exit code">Main.st</File>
     <File Description="Local data types" Private="true">Types.typ</File>
     <File Description="Local variables" Private="true">Variables.var</File>
-    <File>Exercise4.st</File>
-    <File>Exercise5.st</File>
   </Files>
 </Program>

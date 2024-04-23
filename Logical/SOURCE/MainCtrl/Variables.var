@@ -1,0 +1,3 @@
+VAR
+	MainState : eMainState;
+END_VAR

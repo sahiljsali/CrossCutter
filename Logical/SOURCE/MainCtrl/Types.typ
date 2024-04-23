@@ -1,0 +1,11 @@
+
+TYPE
+	eMainState : 
+		(
+		WAIT,
+		SELECT_MODE,
+		SINGLE_BLADE,
+		DUAL_BLADE,
+		ERROR
+		);
+END_TYPE

@@ -1,0 +1,4 @@
+VAR
+	AxisHomeState : eAxisHome;
+	Axis : Axis_typ;
+END_VAR
