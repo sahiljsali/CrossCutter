@@ -13,8 +13,8 @@ ACTION DoubleBladeCam:
 	CamSeqPara.Configuration.State[1].SlaveFactor 					:= 1; //Slave Dist.
 	
 	CamSeqPara.Configuration.State[1].CompMode   	 				:= ncONLYCOMP;
-	CamSeqPara.Configuration.State[1].MasterCompDistance			:= 1580; //Master Dist. 
-	CamSeqPara.Configuration.State[1].SlaveCompDistance				:= 1580; //Slave Dist.
+	CamSeqPara.Configuration.State[1].MasterCompDistance			:= 720; //Master Dist. 
+	CamSeqPara.Configuration.State[1].SlaveCompDistance				:= 720; //Slave Dist.
 	
 	(** Event **)
 	CamSeqPara.Configuration.State[1].Event[0].Type 				:= ncST_END; //Trigger 
@@ -23,14 +23,14 @@ ACTION DoubleBladeCam:
 	
 	(*************************** STATE 2 ****************************)
 	CamSeqPara.Configuration.State[2].CamProfileIndex 				:= 16#FFFF;
-	CamSeqPara.Configuration.State[2].MasterFactor 					:= 400;  //Master Dist. 
-	CamSeqPara.Configuration.State[2].SlaveFactor 					:= -400; //Slave Dist.
+	CamSeqPara.Configuration.State[2].MasterFactor 					:= 360;  //Master Dist. 
+	CamSeqPara.Configuration.State[2].SlaveFactor 					:= -360; //Slave Dist.
 	
 	
 	(** Event **)
 	CamSeqPara.Configuration.State[2].Event[0].Type 				:= ncST_END; //Trigger 
 	CamSeqPara.Configuration.State[2].Event[0].Attribute 			:= ncST_END; //Reaction 
-	CamSeqPara.Configuration.State[2].Event[0].NextState 			:= 0; //Next State
+	CamSeqPara.Configuration.State[2].Event[0].NextState 			:= 3; //Next State
 	
 	
 	(*************************** STATE 3 ****************************)
@@ -39,8 +39,8 @@ ACTION DoubleBladeCam:
 	CamSeqPara.Configuration.State[3].SlaveFactor 					:= 1; //Slave Dist.
 	
 	CamSeqPara.Configuration.State[3].CompMode   	 				:= ncONLYCOMP;
-	CamSeqPara.Configuration.State[3].MasterCompDistance			:= 1620; //Master Dist. 
-	CamSeqPara.Configuration.State[3].SlaveCompDistance				:= 1620; //Slave Dist.
+	CamSeqPara.Configuration.State[3].MasterCompDistance			:= 1440; //Master Dist. 
+	CamSeqPara.Configuration.State[3].SlaveCompDistance				:= 1440; //Slave Dist.
 	
 	(** Event **)
 	CamSeqPara.Configuration.State[3].Event[0].Type 				:= ncST_END; //Trigger 
@@ -55,5 +55,19 @@ ACTION DoubleBladeCam:
 	(** Event **)
 	CamSeqPara.Configuration.State[4].Event[0].Type 				:= ncST_END; //Trigger 
 	CamSeqPara.Configuration.State[4].Event[0].Attribute 			:= ncST_END; //Reaction 
-	CamSeqPara.Configuration.State[4].Event[0].NextState 			:= 1; //Next State
+	CamSeqPara.Configuration.State[4].Event[0].NextState 			:= 5; //Next State
+	
+	(*************************** STATE 3 ****************************)
+	CamSeqPara.Configuration.State[5].CamProfileIndex 				:= 16#FFFE;
+	CamSeqPara.Configuration.State[5].MasterFactor 					:= 1; //Master Dist. 
+	CamSeqPara.Configuration.State[5].SlaveFactor 					:= 1; //Slave Dist.
+	
+	CamSeqPara.Configuration.State[5].CompMode   	 				:= ncONLYCOMP;
+	CamSeqPara.Configuration.State[5].MasterCompDistance			:= 1440; //Master Dist. 
+	CamSeqPara.Configuration.State[5].SlaveCompDistance				:= 1440; //Slave Dist.
+	
+	(** Event **)
+	CamSeqPara.Configuration.State[5].Event[0].Type 				:= ncST_END; //Trigger 
+	CamSeqPara.Configuration.State[5].Event[0].Attribute 			:= ncST_END; //Reaction 
+	CamSeqPara.Configuration.State[5].Event[0].NextState 			:= 2; //Next State
 END_ACTION

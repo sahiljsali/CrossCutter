@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/Main</prop>
+  </header>
+  <body>
+    <tu tuid="1">
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>HOME</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="en">
+        <seg>RECIPE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="en">
+        <seg>USER</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="en">
+        <seg>ALARMS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="en">
+        <seg>DIAGNOS.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="en">
+        <seg>OVERVIEW</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="en">
+        <seg>Cyan Color Ratio</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="en">
+        <seg>Magenta Color Ratio</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9">
+      <tuv xml:lang="en">
+        <seg>Yellow Color Ratio</seg>
+      </tuv>
+    </tu>
+    <tu tuid="10">
+      <tuv xml:lang="en">
+        <seg>Black Color Ratio</seg>
+      </tuv>
+    </tu>
+    <tu tuid="11">
+      <tuv xml:lang="en">
+        <seg>Mixing Time</seg>
+      </tuv>
+    </tu>
+    <tu tuid="12">
+      <tuv xml:lang="en">
+        <seg>PARA.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="13">
+      <tuv xml:lang="en">
+        <seg>ACK.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="14">
+      <tuv xml:lang="en">
+        <seg>ACK. ALL</seg>
+      </tuv>
+    </tu>
+    <tu tuid="15">
+      <tuv xml:lang="en">
+        <seg>Select Your Preferred System Language Using The Below Button</seg>
+      </tuv>
+    </tu>
+    <tu tuid="16">
+      <tuv xml:lang="en">
+        <seg>Set Black Color FlowRate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="17">
+      <tuv xml:lang="en">
+        <seg>Set Yellow Color FlowRate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="18">
+      <tuv xml:lang="en">
+        <seg>Set  Cyan Color FlowRate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="19">
+      <tuv xml:lang="en">
+        <seg>Set Magenta Color FlowRate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="20">
+      <tuv xml:lang="en">
+        <seg>Color1</seg>
+      </tuv>
+    </tu>
+    <tu tuid="21">
+      <tuv xml:lang="en">
+        <seg>Color2</seg>
+      </tuv>
+    </tu>
+    <tu tuid="22">
+      <tuv xml:lang="en">
+        <seg>Color3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="23">
+      <tuv xml:lang="en">
+        <seg>LOAD</seg>
+      </tuv>
+    </tu>
+    <tu tuid="24">
+      <tuv xml:lang="en">
+        <seg>Select User Color to be Loaded</seg>
+      </tuv>
+    </tu>
+    <tu tuid="25">
+      <tuv xml:lang="en">
+        <seg>START</seg>
+      </tuv>
+    </tu>
+    <tu tuid="26">
+      <tuv xml:lang="en">
+        <seg>E-STOP</seg>
+      </tuv>
+    </tu>
+    <tu tuid="27">
+      <tuv xml:lang="en">
+        <seg>If all alarms acks, then press error reset to restart the machine</seg>
+      </tuv>
+    </tu>
+    <tu tuid="28">
+      <tuv xml:lang="en">
+        <seg>E-RESET</seg>
+      </tuv>
+    </tu>
+    <tu tuid="29">
+      <tuv xml:lang="en">
+        <seg>Color4</seg>
+      </tuv>
+    </tu>
+    <tu tuid="30">
+      <tuv xml:lang="en">
+        <seg>Color5</seg>
+      </tuv>
+    </tu>
+    <tu tuid="31">
+      <tuv xml:lang="en">
+        <seg>SAVE</seg>
+      </tuv>
+    </tu>
+    <tu tuid="32">
+      <tuv xml:lang="en">
+        <seg>CONFIRM</seg>
+      </tuv>
+    </tu>
+    <tu tuid="33">
+      <tuv xml:lang="en">
+        <seg>Black Color Tank Flow Rate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="34">
+      <tuv xml:lang="en">
+        <seg>Cyan Color Tank Flow Rate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="35">
+      <tuv xml:lang="en">
+        <seg>Yellow Color Tank Flow Rate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="36">
+      <tuv xml:lang="en">
+        <seg>Magenta Color Tank Flow Rate</seg>
+      </tuv>
+    </tu>
+    <tu tuid="37">
+      <tuv xml:lang="en">
+        <seg>Set Recipe Parameters</seg>
+      </tuv>
+    </tu>
+    <tu tuid="38">
+      <tuv xml:lang="en">
+        <seg>Set Flow Rate Parameters</seg>
+      </tuv>
+    </tu>
+    <tu tuid="39">
+      <tuv xml:lang="en">
+        <seg>Machine Status :</seg>
+      </tuv>
+    </tu>
+    <tu tuid="40">
+      <tuv xml:lang="en">
+        <seg>Add </seg>
+      </tuv>
+    </tu>
+    <tu tuid="41">
+      <tuv xml:lang="en">
+        <seg>Delete</seg>
+      </tuv>
+    </tu>
+    <tu tuid="42">
+      <tuv xml:lang="en">
+        <seg>Modify</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

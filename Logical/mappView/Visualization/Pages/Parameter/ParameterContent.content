@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ParameterContent" height="621" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="LabelFlowRate1" top="68" left="20" width="256" zIndex="2" text="$IAT/Main/16" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelFlowRate2" top="120" left="20" width="256" zIndex="3" text="$IAT/Main/17" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelFlowRate3" top="172" left="20" width="256" zIndex="4" text="$IAT/Main/18" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelFlowRate4" top="224" left="20" width="256" zIndex="5" text="$IAT/Main/19" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputFlowRate1" top="68" left="300" width="88" zIndex="6" maxValue="50" minValue="1" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputFlowRate2" top="120" left="300" width="88" zIndex="7" maxValue="50" minValue="1" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputFlowRate3" top="172" left="300" width="88" zIndex="8" maxValue="50" minValue="1" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputFlowRate4" top="224" left="300" width="88" zIndex="9" maxValue="50" minValue="1" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelCyan" top="324" left="20" width="156" zIndex="10" text="$IAT/Main/7" bold="true" underline="false" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelMagenta" top="378" left="20" width="172" zIndex="11" text="$IAT/Main/8" bold="true" underline="false" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelYellow" top="432" left="20" width="156" zIndex="12" text="$IAT/Main/9" bold="true" underline="false" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelBlack" top="486" left="20" width="156" zIndex="13" text="$IAT/Main/10" bold="true" underline="false" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelMixingTIme" top="540" left="20" width="156" zIndex="14" text="$IAT/Main/11" bold="true" underline="false" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="316" left="12" width="456" height="292" zIndex="1" />
+    <Widget xsi:type="widgets.brease.Label" id="RecipeLabel" top="280" left="20" width="196" zIndex="15" text="$IAT/Main/37" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputColor1" top="324" left="300" width="88" zIndex="16" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputColor2" top="378" left="300" width="88" zIndex="17" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputColor3" top="432" left="300" width="88" zIndex="18" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputColor4" top="486" left="300" width="88" zIndex="19" unit="{'metric':'G51','imperial':'G51','imperial-us':'G51'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="InputMixingTime" top="540" left="268" width="124" zIndex="20" maxValue="1000000" unit="{'metric':'C26','imperial':'C26','imperial-us':'C26'}" unitAlign="right" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="48" left="12" width="468" height="216" zIndex="0" />
+    <Widget xsi:type="widgets.brease.Label" id="FlowRateLabel" top="16" left="20" width="288" zIndex="21" text="$IAT/Main/38" />
+  </Widgets>
+</Content>

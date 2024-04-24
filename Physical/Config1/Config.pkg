@@ -7,6 +7,7 @@
     <Object Type="Cpu">4PPC70_101G_20B</Object>
     <Object Type="File">Hardware.jpg</Object>
     <Object Type="Cpu">X20CP0484</Object>
+    <Object Type="Cpu">5PPC2100_BY22_000</Object>
   </Objects>
   <Sources Download="false" IncludeUpgrades="true" Mode="ProjectTransfer" Option="Complete" />
 </Configuration>

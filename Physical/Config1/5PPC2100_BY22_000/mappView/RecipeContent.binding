@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="RecipeContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankCyan.para.percentage" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="OutputCyan" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankMag.para.percentage" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="OutputMagenta" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankYellow.para.percentage" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="OutputYellow" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankBlack.para.percentage" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="OutputBlack" attribute="value" />
+</Binding>
+	<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_UserColor3" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="Color3BTN" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_UserColor2" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="Color2BTN" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_UserColor1" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="Color1BTN" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_MixingTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="OutputMixingTime" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Recipe:iFB_RecipeColor.Save" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="SaveRecipeBTN" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Recipe:iFB_RecipeColor.Load" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="LoadRecipeBTN" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_RecipeConfirm" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="ConfirmBTN" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_UserColor4" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="Color4BTN" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_UserColor5" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="Color5BTN" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankCyan.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="FlowRateOutput2" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankBlack.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="FlowRateOutput1" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankYellow.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="FlowRateOutput3" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankMag.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipeContent" widgetRefId="FlowRateOutput4" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

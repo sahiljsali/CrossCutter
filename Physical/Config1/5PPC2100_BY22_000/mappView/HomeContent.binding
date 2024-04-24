@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="HomeContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankBlack.para.SrcTankCap" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="BlackColorBar" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankCyan.para.SrcTankCap" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="CyanColorBlack" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankMag.para.SrcTankCap" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="MagColorBar" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankYellow.para.SrcTankCap" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="YellowColorBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMainTankCtrl.para.tankCapacity" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="MainTankBar" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pCyanTankIO.diLowLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList3" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pCyanTankIO.diHighLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList2" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pBlackTankIO.diLowLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList1" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pBlackTankIO.diHighLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMagTankIO.diHighLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList4" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMagTankIO.diLowLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList5" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pYellowTankIO.diHighLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList6" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pYellowTankIO.diLowLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList8" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMainTankIO.diLowLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList7" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMainTankIO.diHighLvlSens" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList9" attribute="selectedIndex" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:iAutoCtrl.cmd.start" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="StartBTN" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:iAutoCtrl.cmd.eStop" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="eStopBTN" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankYellow.cmd.valve" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList13" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankMag.cmd.valve" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList12" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankCyan.cmd.valve" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList11" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankBlack.cmd.valve" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList10" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMainTankCtrl.cmd.valve" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="ImageList14" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_YellowRemainingTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="YellowOutput" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_MagRemainingTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="MagentaOutput" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_CyanRemainingTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="CyanOutput" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gMI_BlackRemainingTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="BlackOutput" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gVA_MachineStatus" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="txtOutputMachine" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:iMI_SliderPos" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="Conv" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pMainTankIO.diCanFilled" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="CanFilledInput" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

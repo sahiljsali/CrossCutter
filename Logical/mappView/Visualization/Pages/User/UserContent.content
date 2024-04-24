@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="UserContent" height="621" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.UserList" id="UserList1" top="200" left="12" width="776" height="396" zIndex="0" itemsPerPage="5">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem1" width="224" zIndex="0" text="UserName" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem2" width="292" zIndex="1" columnType="Roles" text="Role" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="UserListItem3" width="252" zIndex="2" columnType="IsAdmin" text="IsAdmin" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Login" id="Login1" top="32" left="12" width="268" height="148" zIndex="1" />
+    <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton" top="116" left="36" width="92" zIndex="2" text="Logout" />
+    <Widget xsi:type="widgets.brease.Button" id="AddBtn" top="140" left="372" zIndex="3" text="$IAT/Main/40" />
+    <Widget xsi:type="widgets.brease.Button" id="ModifyBTn" top="140" left="528" zIndex="4" text="$IAT/Main/42" />
+    <Widget xsi:type="widgets.brease.Button" id="DeleteBTN" top="140" left="684" zIndex="5" text="$IAT/Main/41" />
+  </Widgets>
+</Content>

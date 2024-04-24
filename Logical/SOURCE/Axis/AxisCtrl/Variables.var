@@ -1,4 +1,6 @@
 VAR
 	AxisHomeState : eAxisHome;
 	Axis : Axis_typ;
+	SequenceState : eSequence;
+	EStopState : eEStop;
 END_VAR

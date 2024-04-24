@@ -9,6 +9,7 @@ TYPE
 		bHome : BOOL;
 		bStop : BOOL;
 		bEStop : BOOL;
+		bErrorReset : BOOL;
 	END_STRUCT;
 	AxisPara_typ : 	STRUCT 
 		gMachineSpeed : USINT;

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="MediaPackage" PackageType="MediaPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">SymbolLib</Object>
+    <Object Type="File">logo 3.png</Object>
+    <Object Type="File">green.svg</Object>
+    <Object Type="File">red.svg</Object>
+    <Object Type="File">black.svg</Object>
+    <Object Type="File">orange.svg</Object>
+    <Object Type="File">empty-can-2-svgrepo-com.svg</Object>
+  </Objects>
+</Package>

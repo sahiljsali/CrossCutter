@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ParameterContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pRecipePar.BlackColorRatio" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputColor4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pRecipePar.YellowColorRatio" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputColor3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pRecipePar.MagColorRatio" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputColor2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pRecipePar.CyanColorRatio" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputColor1" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pRecipePar.StirringTime" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputMixingTime" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankMag.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputFlowRate4" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankCyan.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputFlowRate3" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankYellow.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputFlowRate2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AutoCycle:pSrcTankBlack.para.flowRate" attribute="value" />
+<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="InputFlowRate1" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>
