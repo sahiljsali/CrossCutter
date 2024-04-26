@@ -1,0 +1,3 @@
+VAR RETAIN
+	SpeedInRPM : INT;
+END_VAR

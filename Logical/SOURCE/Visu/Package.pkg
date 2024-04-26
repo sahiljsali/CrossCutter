@@ -2,6 +2,8 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
+    <Object Type="File">Visu.typ</Object>
+    <Object Type="File" Private="true">Visu.var</Object>
     <Object Type="Program" Language="IEC" Description="Program for Visualization">VisuCtrl</Object>
   </Objects>
 </Package>

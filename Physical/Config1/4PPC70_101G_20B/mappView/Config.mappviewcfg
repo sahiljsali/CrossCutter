@@ -8,14 +8,12 @@
       </Selector>
       <Property ID="MaxClientConnections" Value="1" />
       <Property ID="MaxBRClientConnections" Value="0" />
-      <Selector ID="AuthenticationMode" Value="AuthenticationModeMpUserX">
-        <Property ID="MpUserXUserPreferences" Value="TRUE" />
-      </Selector>
+      <Selector ID="AuthenticationMode" Value="AuthenticationModeRbac" />
       <Group ID="TcpProxyConf">
         <Selector ID="InsecureMode" Value="1" />
       </Group>
       <Group ID="DiagnosticPageConf">
-        <Selector ID="DiagnosticPageSelection" Value="1" />
+        <Selector ID="DiagnosticPageSelection" Value="2" />
       </Group>
       <Selector ID="Deployment" Value="DeploymentPLC" />
     </Group>
@@ -34,7 +32,7 @@
         <Property ID="cachingSlots" Value="200" />
         <Property ID="preserveOldValues" Value="TRUE" />
       </Group>
-      <Property ID="defaultVisu" Value="PaintMixer_Vis" />
+      <Property ID="defaultVisu" Value="CrossCutter_Vis" />
       <Group ID="Widget">
         <Selector ID="renderingPolicy" Value="1" />
         <Selector ID="securityPolicy" Value="1" />

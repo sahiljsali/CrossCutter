@@ -11,6 +11,7 @@
       <Parameter ID="DeviceParam" Value="/EDDN=gei" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="CrossCutterExercise_Config1" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="PermanentPvSize" Value="2000" />
     <Parameter ID="RemanentGlobalPvSize" Value="2000" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
@@ -19,6 +20,8 @@
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
     <Parameter ID="KeyMappingFile" Value="VC\4PPC70_101G_20B.dis" />
   </Module>
   <Module Name="8AC114.60-2" Type="8AC114.60-2" Version="1.0.0.8">

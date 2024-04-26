@@ -21,4 +21,25 @@ TYPE
 		ERROR_RESET,
 		RESET_DONE
 		);
+	eUpdate : 
+		(
+		CHECK_UPDATE,
+		START_UPDATE,
+		UPDATE_DONE
+		);
+	eJogSlave : 
+		(
+		WAIT_JOG,
+		JOG_POSITIVE,
+		JOG_NEGATIVE,
+		STOP_JOG
+		);
+	ePower : 
+		(
+		WAIT_CMD,
+		POWER_ON,
+		RUNNING,
+		STOP_RUN,
+		POWER_OFF
+		);
 END_TYPE

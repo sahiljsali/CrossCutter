@@ -2,7 +2,12 @@ VAR
 	AxisHomeState : eAxisHome;
 	SequenceState : eSequence;
 	EStopState : eEStop;
+	UpdateState : eUpdate;
 END_VAR
 VAR CONSTANT
 	SafetyFactor : REAL := 1.5;
+END_VAR
+VAR
+	JogState : eJogSlave;
+	PowerState : ePower;
 END_VAR

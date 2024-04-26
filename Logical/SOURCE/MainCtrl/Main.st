@@ -42,9 +42,9 @@ PROGRAM _CYCLIC
 			IF MpAxisMaster.UpdateDone AND MpAxisSlave.UpdateDone THEN
 				MainState := SELECT_MODE;
 			END_IF
-		  
-
 	END_CASE;
+
+	
 END_PROGRAM
 
 PROGRAM _EXIT

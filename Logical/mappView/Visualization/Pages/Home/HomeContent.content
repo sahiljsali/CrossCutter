@@ -3,8 +3,8 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="416" left="648" width="148" height="196" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.ToggleButton" id="StartBTN" top="16" left="20" height="72" zIndex="0" text="$IAT/Main/25" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="eStopBTN" top="100" left="20" height="72" zIndex="1" text="$IAT/Main/26" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="eStopBTN" top="100" left="20" height="72" zIndex="0" text="$IAT/Main/26" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="StartBTN" top="24" left="12" width="108" height="60" zIndex="1" text="$IAT/Main/25" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Label" id="LabelMachineStatus" top="564" left="24" width="132" zIndex="1" text="$IAT/Main/39" />

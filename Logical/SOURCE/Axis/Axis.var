@@ -1,3 +1,27 @@
 VAR
 	Axis : Axis_typ;
 END_VAR
+VAR CONSTANT
+	SPositionSingle : INT := 3550;
+	MPositionSingle : INT := 3450;
+	SlaveOffsetSingle : INT := 0;
+	MasterOffsetSingle : INT := 0;
+	MUpPositionDouble : INT := 825;
+	SPositionDouble : INT := 2250;
+	MDownPositionDouble : INT := 2625;
+	MasterUpOffsetDouble : INT := 825;
+	MasterDownOffsetDouble : INT := 2625;
+	HomingVelocity : INT := 1200;
+	MUpPosLimit1 : INT := 1480;
+	MUpPosLimit2 : INT := 3501;
+	MUpNegLimit1 : INT := 0;
+	MUpNegLimit2 : INT := 3599;
+	MDownNegLimit : INT := 1940;
+	MDownPosLimit : INT := 3500;
+	MCutRegionNegLimit1 : INT := 1480;
+	MCutRegionPosLimit1 : INT := 1940;
+	MCutRegionNegLimit2 : INT := 3280;
+	MCutRegionPosLimit2 : INT := 3599;
+	MCutRegionPosLimit3 : INT := 1;
+	MCutRegionNegLimit3 : INT := 150;
+END_VAR
