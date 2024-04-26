@@ -1,0 +1,3 @@
+VAR
+	Axis : Axis_typ;
+END_VAR

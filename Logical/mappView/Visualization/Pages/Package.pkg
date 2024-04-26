@@ -4,7 +4,6 @@
   <Objects>
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">Home</Object>
-    <Object Type="Package">Recipe</Object>
     <Object Type="Package">Alarm</Object>
     <Object Type="Package">User</Object>
     <Object Type="Package">Diagnostic</Object>

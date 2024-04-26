@@ -24,13 +24,13 @@
     </Group>
     <Group ID="limit">
       <Group ID="parameter">
-        <Parameter ID="v_pos" Value="120000.0" />
-        <Parameter ID="v_neg" Value="120000.0" />
+        <Parameter ID="v_pos" Value="50000.0" />
+        <Parameter ID="v_neg" Value="50000.0" />
         <Parameter ID="a1_pos" Value="120000.0" />
-        <Parameter ID="a2_pos" Value="200000.0" />
-        <Parameter ID="a1_neg" Value="200000.0" />
-        <Parameter ID="a2_neg" Value="200000.0" />
-        <Parameter ID="t_jolt" Value="0" />
+        <Parameter ID="a2_pos" Value="120000.0" />
+        <Parameter ID="a1_neg" Value="120000.0" />
+        <Parameter ID="a2_neg" Value="120000.0" />
+        <Parameter ID="t_jolt" Value="0.02" />
         <Parameter ID="t_in_pos" Value="0" />
         <Parameter ID="pos_sw_end" Value="2000000000" />
         <Parameter ID="neg_sw_end" Value="-2000000000" />

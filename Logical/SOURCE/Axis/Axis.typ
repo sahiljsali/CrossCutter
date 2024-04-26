@@ -10,8 +10,11 @@ TYPE
 		bStop : BOOL;
 		bEStop : BOOL;
 		bErrorReset : BOOL;
+		bSingleBlade : BOOL;
+		bDoubleBlade : BOOL;
+		bReverse : BOOL;
 	END_STRUCT;
 	AxisPara_typ : 	STRUCT 
-		gMachineSpeed : USINT;
+		gMachineSpeed : REAL;
 	END_STRUCT;
 END_TYPE

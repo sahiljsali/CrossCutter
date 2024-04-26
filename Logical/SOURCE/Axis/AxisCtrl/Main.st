@@ -1,27 +1,26 @@
 
 PROGRAM _INIT
 	(* Insert code here *)
-	MasterPara.Acceleration := 50000;
-	MasterPara.Deceleration := 50000;
-	MasterPara.Position := 3500;
+	MasterPara.Acceleration := 72000;
+	MasterPara.Deceleration := 72000;
 	
-	MasterPara.Home.StartVelocity := 360;
-	MasterPara.Home.HomingVelocity := 360;
+	
+	MasterPara.Home.StartVelocity := 720;
+	MasterPara.Home.HomingVelocity := 720;
 	MasterPara.Home.Acceleration := 3600;
 	MasterPara.Home.Mode := mpAXIS_HOME_MODE_DIRECT;
 	MasterPara.Home.ReferencePulse := mpAXIS_HOME_OPTION_ON;
 	
-	SlavePara.Acceleration := 50000;
-	SlavePara.Deceleration := 50000;
-	SlavePara.Position := 3570;
+	SlavePara.Acceleration := 72000;
+	SlavePara.Deceleration := 72000;
 	
-	SlavePara.Home.StartVelocity := 360;
-	SlavePara.Home.HomingVelocity := 360;
+	SlavePara.Home.StartVelocity := 720;
+	SlavePara.Home.HomingVelocity := 720;
 	SlavePara.Home.Acceleration := 3600;
 	SlavePara.Home.Mode := mpAXIS_HOME_MODE_DIRECT;
 	SlavePara.Home.ReferencePulse := mpAXIS_HOME_OPTION_ON;
 
-	
+	Axis.Para.gMachineSpeed := 8000;
 	
 END_PROGRAM
 
@@ -40,8 +39,11 @@ PROGRAM _CYCLIC
 	MpAxisSlave.Axis := ADR(gAxis01);
 	MpAxisSlave();
 	
-//	SingleBladeCam;
-	DoubleBladeCam;
+	IF Axis.Cmd.bSingleBlade THEN
+		SingleBladeCam;
+	ELSIF Axis.Cmd.bDoubleBlade THEN
+		DoubleBladeCam;
+	END_IF
 	
 	MpAxisCamSequencer_0.MpLink := ADR(gML_Slave);
 	MpAxisCamSequencer_0.MpLinkMaster := ADR(gML_Master);
@@ -49,18 +51,66 @@ PROGRAM _CYCLIC
 	MpAxisCamSequencer_0.Parameters := ADR(CamSeqPara);
 	MpAxisCamSequencer_0();
 	
-	
+	IF Axis.Cmd.bSingleBlade THEN
+		SlavePara.Position := 3550;
+		MasterPara.Position := 3450;
+		SlavePara.Home.SensorOffset := 0;
+		MasterPara.Home.SensorOffset := 0;
+		
 	IF (((MpAxisMaster.Position <= 1480) AND (MpAxisMaster.Position >= 0)) OR((MpAxisMaster.Position >= 3501)AND(MpAxisMaster.Position <= 3599))) AND (MpAxisMaster.MoveVelocity = FALSE) THEN
 		MasterPara.Home.StartDirection := mpAXIS_HOME_DIR_NEGATIVE;
 		MasterPara.Home.HomingDirection := mpAXIS_HOME_DIR_NEGATIVE;
 	ELSIF (MpAxisMaster.Position >= 1940) AND (MpAxisMaster.Position <= 3500) AND (MpAxisMaster.MoveVelocity = FALSE) THEN
 		MasterPara.Home.StartDirection := mpAXIS_HOME_DIR_POSITIVE;
 		MasterPara.Home.HomingDirection := mpAXIS_HOME_DIR_POSITIVE;
-	ELSIF (MpAxisMaster.Position > 1480) AND (MpAxisMaster.Position < 1940) AND (MpAxisMaster.MoveVelocity = FALSE) THEN
-		MpAxisMaster.Power := FALSE;
-		MpAxisSlave.Power := FALSE;
+	ELSIF (MpAxisMaster.Position > 1480) AND (MpAxisMaster.Position < 1940) THEN
+			IF (MpAxisMaster.MoveVelocity = FALSE) AND (MpAxisMaster.JogPositive) AND (MpAxisMaster.JogNegative) THEN
+				MpAxisMaster.Power := FALSE;
+				MpAxisSlave.Power := FALSE;
+			END_IF	
 	END_IF
 		
+	ELSIF Axis.Cmd.bDoubleBlade THEN
+	
+		IF (((MpAxisMaster.Position <= 1480) AND (MpAxisMaster.Position >= 0)) OR((MpAxisMaster.Position >= 3501)AND(MpAxisMaster.Position <= 3599))) THEN 
+			IF (MpAxisMaster.MoveVelocity = FALSE) THEN
+				MasterPara.Position := 825;
+				SlavePara.Position := 2250;
+				MasterPara.Direction := mpAXIS_DIR_SHORTEST_WAY;
+				SlavePara.Direction := mpAXIS_DIR_SHORTEST_WAY;
+			END_IF
+		ELSIF (MpAxisMaster.Position >= 1940) AND (MpAxisMaster.Position <= 3500) AND (MpAxisMaster.MoveVelocity = FALSE) THEN
+			MasterPara.Position := 2625;
+			SlavePara.Position := 2250;
+			MasterPara.Direction := mpAXIS_DIR_SHORTEST_WAY;
+			SlavePara.Direction := mpAXIS_DIR_SHORTEST_WAY;
+		ELSIF ((MpAxisMaster.Position > 1480) AND (MpAxisMaster.Position < 1940)) THEN 
+			IF (MpAxisMaster.MoveVelocity = FALSE) THEN
+				MpAxisMaster.Power := FALSE;
+				MpAxisSlave.Power := FALSE;
+			END_IF
+		ELSIF (((MpAxisMaster.Position >= 3280) AND (MpAxisMaster.Position <= 3599)) AND ((MpAxisMaster.Position >= 1) AND (MpAxisMaster.Position <= 150)))THEN
+			IF (MpAxisMaster.MoveVelocity = FALSE) AND (MpAxisMaster.JogPositive) AND (MpAxisMaster.JogNegative) THEN
+				MpAxisMaster.Power := FALSE;
+				MpAxisSlave.Power := FALSE;
+			END_IF
+		END_IF
+		
+		IF (MpAxisMaster.Position > 825) AND (MpAxisMaster.Position < 1480) THEN
+			MasterPara.Home.SensorOffset := 825;
+			MasterPara.Home.HomingDirection := mpAXIS_HOME_DIR_NEGATIVE;
+		ELSIF (MpAxisMaster.Position > 0) AND (MpAxisMaster.Position < 825) THEN
+			MasterPara.Home.SensorOffset := 825;
+			MasterPara.Home.HomingDirection := mpAXIS_HOME_DIR_POSITIVE;
+		ELSIF (MpAxisMaster.Position > 1940) AND (MpAxisMaster.Position < 2625) THEN
+			MasterPara.Home.SensorOffset := 2625;
+			MasterPara.Home.HomingDirection := mpAXIS_HOME_DIR_POSITIVE;
+		ELSIF (MpAxisMaster.Position > 2625) AND (MpAxisMaster.Position < 3599) THEN
+			MasterPara.Home.SensorOffset := 2625;
+			MasterPara.Home.HomingDirection := mpAXIS_HOME_DIR_NEGATIVE;
+		END_IF
+	
+	END_IF
 	
 	IF Axis.Cmd.bHome THEN
 		MasterPara.Direction := mpAXIS_DIR_SHORTEST_WAY;
@@ -71,8 +121,8 @@ PROGRAM _CYCLIC
 	ELSE
 		MasterPara.Direction := mpAXIS_DIR_POSITIVE;
 		SlavePara.Direction := mpAXIS_DIR_POSITIVE;
-		MasterPara.Velocity := 120000;
-		SlavePara.Velocity := 120000;
+		MasterPara.Velocity := (Axis.Para.gMachineSpeed/SafetyFactor);
+		SlavePara.Velocity := (Axis.Para.gMachineSpeed/SafetyFactor);
 		
 	END_IF
 
@@ -89,9 +139,9 @@ PROGRAM _CYCLIC
 				END_IF
 			END_IF
 			
-//			IF (MpAxisMaster.Error = TRUE) OR (MpAxisSlave.Error = TRUE) OR (MpAxisCamSequencer_0.Error = TRUE) THEN
-//				AxisHomeState := ERROR;
-//			END_IF
+			//			IF (MpAxisMaster.Error = TRUE) OR (MpAxisSlave.Error = TRUE) OR (MpAxisCamSequencer_0.Error = TRUE) THEN
+			//				AxisHomeState := ERROR;
+			//			END_IF
 			
 		HOME:
 			MpAxisCamSequencer_0.StartSequence := FALSE;
@@ -149,7 +199,7 @@ PROGRAM _CYCLIC
 			CHECK_STATUS:
 				IF ((MpAxisMaster.InVelocity = FALSE) AND (MpAxisMaster.Position = MasterPara.Position) AND (MpAxisMaster.Error = FALSE)) THEN
 					IF ((MpAxisSlave.InVelocity = FALSE) AND (MpAxisSlave.Position = SlavePara.Position) AND (MpAxisSlave.Error = FALSE)) THEN
-						IF MpAxisCamSequencer_0.InSync = FALSE THEN
+						IF (MpAxisCamSequencer_0.InSync = FALSE) AND (MpAxisMaster.IsHomed AND MpAxisSlave.IsHomed) THEN
 							MpAxisCamSequencer_0.StartSequence := FALSE;
 							SequenceState := START_SEQ;
 						END_IF
@@ -168,6 +218,8 @@ PROGRAM _CYCLIC
 	CASE EStopState OF
 		ESTOP_DETECT:
 			IF (MpAxisMaster.Info.DigitalInputsStatus.DriveEnable = FALSE) OR (MpAxisSlave.Info.DigitalInputsStatus.DriveEnable = FALSE) THEN
+				EStopState := ERROR_RESET;
+			ELSIF (MpAxisMaster.Error = TRUE) OR (MpAxisSlave.Error = TRUE) OR (MpAxisCamSequencer_0.Error = TRUE) THEN
 				EStopState := ERROR_RESET;
 			END_IF
 		
@@ -207,9 +259,9 @@ PROGRAM _CYCLIC
 				MpAxisMaster.Power := TRUE;
 				MpAxisSlave.Power := TRUE;
 				EStopState := ESTOP_DETECT;
-			END_IF	
-			
+			END_IF		
 	END_CASE;
+
 	
 END_PROGRAM
 

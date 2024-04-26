@@ -5,28 +5,17 @@
     <Page refId="HomePage" />
     <Page refId="AlarmPage" />
     <Page refId="UserPage" />
-    <Page refId="RecipePage" />
     <Page refId="DiagnosticPage" />
     <Page refId="ParameterPage" />
   </Pages>
   <Navigations />
-  <BindingsSets>
-    <BindingsSet refId="AlarmContent_binding" />
-    <BindingsSet refId="HomeContent_binding" />
-    <BindingsSet refId="RecipeContent_binding" />
-    <BindingsSet refId="ParameterContent_binding" />
-  </BindingsSets>
-  <EventBindingsSets>
-    <EventBindingsSet refId="eventbinding" />
-    <EventBindingsSet refId="AlarmContent_eventbinding" />
-    <EventBindingsSet refId="UserContent_eventbinding" />
-  </EventBindingsSets>
+  <BindingsSets />
+  <EventBindingsSets />
   <Dialogs />
   <Contents>
     <Content refId="HomeContent" />
     <Content refId="FooterContent" />
     <Content refId="NavigationContent" />
-    <Content refId="RecipeContent" />
     <Content refId="AlarmContent" />
     <Content refId="UserContent" />
     <Content refId="DiagnosticContent" />

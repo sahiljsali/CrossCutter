@@ -1,6 +1,8 @@
 VAR
 	AxisHomeState : eAxisHome;
-	Axis : Axis_typ;
 	SequenceState : eSequence;
 	EStopState : eEStop;
+END_VAR
+VAR CONSTANT
+	SafetyFactor : REAL := 1.5;
 END_VAR
