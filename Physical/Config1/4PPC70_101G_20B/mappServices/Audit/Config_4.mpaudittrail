@@ -9,5 +9,6 @@
         <Property ID="[2]" Value="18" />
       </Group>
     </Group>
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

@@ -1,4 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ParameterContent" height="621" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets />
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NumericOutput" id="MasterSpeedNumericOutput" top="80" left="280" width="120" zIndex="0" unit="{'metric':'RPM','imperial':'RPM','imperial-us':'RPM'}" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="MasterPositionNumericOutput" top="160" left="280" width="120" zIndex="1" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SlaveTorqueNumericOutput" top="240" left="280" width="120" zIndex="2" unit="{'metric':'NU','imperial':'NU','imperial-us':'NU'}" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SlaveCurrentNumericOutput" top="320" left="280" width="120" zIndex="3" unit="{'metric':'AMP','imperial':'AMP','imperial-us':'AMP'}" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="MaxSlaveCurrentNumericOutput" top="400" left="280" width="120" zIndex="4" unit="{'metric':'AMP','imperial':'AMP','imperial-us':'AMP'}" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="VoltageNumericOutput" top="560" left="280" width="120" zIndex="5" unit="{'metric':'VLT','imperial':'VLT','imperial-us':'VLT'}" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.Label" id="MasterspeedLabel" top="80" left="80" width="160" zIndex="6" text="Master Speed" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="MasterPoitionLabel" top="160" left="80" width="160" zIndex="7" text="Master Position" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="SlaveTorqueLabel" top="240" left="80" width="160" zIndex="8" text="Slave Torque" borderWidth="3px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="SlaveCurrentLabel" top="320" left="80" width="160" zIndex="9" text="Slave Current" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="MaxSlaveCurrentLabel" top="400" left="80" width="160" zIndex="10" text="Max Slave Current" borderWidth="3px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="VoltageLabel" top="560" left="80" width="160" zIndex="11" text="AC line Voltage" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="SlaveMotorTempLabel" top="480" left="80" width="160" zIndex="12" text="Slave Motor Temp." borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="SlaveMotorTempNumericOutput" top="480" left="280" width="120" zIndex="13" unit="{'metric':'CEL','imperial':'CEL','imperial-us':'CEL'}" unitAlign="right" borderWidth="2px" />
+    <Widget xsi:type="widgets.brease.Label" id="MachOutParLabel" top="20" left="120" width="220" zIndex="14" text="Machine Output Parameter" borderWidth="3px" borderStyle="solid" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="0" left="40" width="400" height="620" zIndex="15" text="" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" borderStyle="dashed" />
+    <Widget xsi:type="widgets.brease.Label" id="MachInParLabel" top="20" left="520" width="220" zIndex="16" text="Machine Input Parameter" borderWidth="3px" borderStyle="solid" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="MachInSpeedInput" top="260" left="560" width="140" height="40" zIndex="17" maxValue="200" unit="{'metric':'RPM','imperial':'RPM','imperial-us':'RPM'}" unitAlign="right" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(85, 85, 85, 1)" activeTextColor="rgba(85, 85, 85, 1)" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="SpeedInLabel" top="200" left="520" width="220" height="40" zIndex="18" text="Machine Speed Input (RPM)" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+  </Widgets>
 </Content>

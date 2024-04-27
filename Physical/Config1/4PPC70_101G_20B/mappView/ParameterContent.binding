@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ParameterContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:SpeedInRPM" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="MachInSpeedInput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:ACLineVoltage_1ph" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="VoltageNumericOutput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:SMotorTemp" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="SlaveMotorTempNumericOutput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:MaxSCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="MaxSlaveCurrentNumericOutput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:SCurrent" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="SlaveCurrentNumericOutput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:STorque" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="SlaveTorqueNumericOutput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:MPosition" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="MasterPositionNumericOutput" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:MSpeedRPM" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ParameterContent" widgetRefId="MasterSpeedNumericOutput" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

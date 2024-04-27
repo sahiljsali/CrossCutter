@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="HomeContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:Main.Cmd.bStart" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="StartMachine" attribute="value" />
+</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bJogStop" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="StopJogButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bJogPositive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="JogButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bStop" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="StopRunbutton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bStart" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="RunButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bDoubleBlade" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="DualBladeButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bSingleBlade" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="SingleBladeModeButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bHome" attribute="value" />
+			<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="HomingButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bPowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="AxisoffButton" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bPowerOff" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="AxisOffButton" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

@@ -8,5 +8,6 @@
     <Object Type="Package">Axis</Object>
     <Object Type="Package">Visu</Object>
     <Object Type="Package">Alarm</Object>
+    <Object Type="Package">Audit</Object>
   </Objects>
 </Package>

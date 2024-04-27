@@ -11,8 +11,13 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="AlarmContent_binding" />
+    <BindingsSet refId="ParameterContent_binding" />
+    <BindingsSet refId="HomeContent_binding" />
   </BindingsSets>
-  <EventBindingsSets />
+  <EventBindingsSets>
+    <EventBindingsSet refId="AlarmContent_eventbinding" />
+    <EventBindingsSet refId="UserContent_eventbinding" />
+  </EventBindingsSets>
   <Dialogs />
   <Contents>
     <Content refId="HomeContent" />

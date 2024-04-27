@@ -6,7 +6,7 @@
   </Element>
   <Element ID="Admin" Type="User">
     <Property ID="UserID" Value="2" />
-    <Property ID="Password" Value="uSVhc+ttc+keojbagE0AEeS0IsoJH3Sb33U3DaKSAgjGDjhy968=" Description="admin" />
+    <Property ID="Password" Value="wJ2IXOvUTqT5DsGyUaGBruK/i7qrN1is/h6D2RTYpToTsY35dok=" Description="A" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Administrator" />
     </Group>

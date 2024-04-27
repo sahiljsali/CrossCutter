@@ -1,0 +1,24 @@
+VAR CONSTANT
+	SafetyFactor : REAL := 1.5;
+END_VAR
+VAR RETAIN
+	SpeedInRPM : INT;
+END_VAR
+VAR
+	MSpeed : REAL;
+	MPosition : DINT;
+	STorque : REAL;
+	SCurrent : REAL;
+	MaxSCurrent : REAL;
+	SMotorTemp : REAL;
+	ACLineVoltage : REAL;
+	MC_BR_CyclicRead_0 : MC_BR_CyclicRead;
+	MC_BR_CyclicRead_1 : MC_BR_CyclicRead;
+	MC_BR_CyclicRead_2 : MC_BR_CyclicRead;
+	MC_BR_CyclicRead_3 : MC_BR_CyclicRead;
+	MC_BR_CyclicRead_4 : MC_BR_CyclicRead;
+	MC_BR_CyclicRead_5 : MC_BR_CyclicRead;
+	MC_BR_CyclicRead_6 : MC_BR_CyclicRead;
+	ACLineVoltage_1ph : REAL;
+	MSpeedRPM : REAL;
+END_VAR

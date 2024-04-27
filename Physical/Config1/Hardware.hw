@@ -11,7 +11,8 @@
       <Parameter ID="DeviceParam" Value="/EDDN=gei" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="CrossCutterExercise_Config1" />
-    <Parameter ID="Simulation" Value="1" />
+    <Parameter ID="UserPartitionSize" Value="50" />
+    <Parameter ID="AutomaticTransferOfUserfiles" Value="on" />
     <Parameter ID="PermanentPvSize" Value="2000" />
     <Parameter ID="RemanentGlobalPvSize" Value="2000" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
@@ -20,6 +21,18 @@
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="Audit" />
+    <Parameter ID="FileDevicePath2" Value="F:\Audit" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="Alarm" />
+    <Parameter ID="FileDevicePath3" Value="F:\Alarm" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="Admin" />
+    <Parameter ID="FtpUserPassword1" Value="T4Uz2BXIDnxGsyqZTzRuzUQm9QwQD6GluvwVo5zYN8E=" Description="A" />
+    <Parameter ID="FtpUserSalt1" Value="sYOJUtYn" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="FTPdevice1" Value="ALL" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
     <Parameter ID="KeyMappingFile" Value="VC\4PPC70_101G_20B.dis" />

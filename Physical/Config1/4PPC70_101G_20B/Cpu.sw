@@ -9,6 +9,7 @@
     <Task Name="AxisCtrl" Source="SOURCE.Axis.AxisCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="VisuCtrl" Source="SOURCE.Visu.VisuCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="AlarmCtrl" Source="SOURCE.Alarm.AlarmCtrl.prg" Memory="UserROM" Description="Program for Alarm Configuration" Language="IEC" Debugging="true" />
+    <Task Name="Audit" Source="SOURCE.Audit.Audit.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -72,5 +73,6 @@
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpReport" Source="Libraries.MpReport.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

@@ -7,17 +7,58 @@
         <ACE RoleName="Administrator" Access="0x005F" />
         <ACE RoleName="Operator" Access="0x005F" />
       </ACL>
+      <ACL Id="2">
+        <ACE RoleName="Administrator" Access="0x01FF" />
+        <ACE RoleName="Operator" Access="0x01FF" />
+      </ACL>
     </ACLAliases>
     <EURangeViolationAliases />
     <EURangesAliases />
     <EngineeringUnitAliases />
   </Aliases>
-  <DefaultView AuditEvents="True" AclId="1">
+  <DefaultView AuditEvents="True" AclId="2">
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
         <Variable Name="gAlarmXCore" />
+        <Variable Name="Axis">
+          <Variable Name="Cmd">
+            <Variable Name="bStart" />
+            <Variable Name="bHome" />
+            <Variable Name="bStop" />
+            <Variable Name="bEStop" />
+            <Variable Name="bErrorReset" />
+            <Variable Name="bSingleBlade" />
+            <Variable Name="bDoubleBlade" />
+            <Variable Name="bReverse" />
+            <Variable Name="bJogPositive" />
+            <Variable Name="bJogNegative" />
+            <Variable Name="bJogStop" />
+            <Variable Name="bPowerOn" />
+            <Variable Name="bPowerOff" />
+          </Variable>
+        </Variable>
+        <Variable Name="Main">
+          <Variable Name="Cmd">
+            <Variable Name="bStart" />
+            <Variable Name="bStop" />
+            <Variable Name="bEStop" />
+            <Variable Name="bDoubleBlade" />
+            <Variable Name="bSingleBlade" />
+          </Variable>
+        </Variable>
       </GlobalVariables>
-      <Task Name="VisuCtrl" />
+      <Task Name="VisuCtrl">
+        <Variable Name="ACLineVoltage" />
+        <Variable Name="ACLineVoltage_1ph" />
+        <Variable Name="MaxSCurrent" />
+        <Variable Name="MPosition" />
+        <Variable Name="MSpeed" />
+        <Variable Name="SCurrent" />
+        <Variable Name="SMotorTemp" />
+        <Variable Name="SpeedInRPM" />
+        <Variable Name="STorque" />
+        <Variable Name="MSpeedRPM" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>
