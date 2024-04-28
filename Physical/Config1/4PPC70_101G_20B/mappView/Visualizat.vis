@@ -7,16 +7,21 @@
     <Page refId="UserPage" />
     <Page refId="DiagnosticPage" />
     <Page refId="ParameterPage" />
+    <Page refId="EventLogPage" />
   </Pages>
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="AlarmContent_binding" />
     <BindingsSet refId="ParameterContent_binding" />
     <BindingsSet refId="HomeContent_binding" />
+    <BindingsSet refId="FooterContent_binding" />
+    <BindingsSet refId="EventContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="AlarmContent_eventbinding" />
     <EventBindingsSet refId="UserContent_eventbinding" />
+    <EventBindingsSet refId="NavigationContent_eventbinding" />
+    <EventBindingsSet refId="HomeContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs />
   <Contents>
@@ -27,6 +32,7 @@
     <Content refId="UserContent" />
     <Content refId="DiagnosticContent" />
     <Content refId="ParameterContent" />
+    <Content refId="EventContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

@@ -42,5 +42,23 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:Axis.Cmd.bPowerOff" attribute="value" />
 <Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="AxisOffButton" attribute="value" />
 </Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:MachineStatus" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="StatusLabel" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::VisuCtrl:HomeRed" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="NotHomedImage" attribute="visible" />
+</Binding>
+
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::VisuCtrl:HomeGreen" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="HomeGreenImage" attribute="visible" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::VisuCtrl:HomeReferenced" attribute="value" />
+<Target xsi:type="brease" contentRefId="HomeContent" widgetRefId="HomeReferImage" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>

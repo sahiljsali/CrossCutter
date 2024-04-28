@@ -8,6 +8,14 @@
         <Property ID="[1]" Value="2" />
         <Property ID="[2]" Value="18" />
       </Group>
+      <Selector ID="TextSource" Value="TXT">
+        <Property ID="OutputFormat" Value="Audit/Root" />
+      </Selector>
+    </Group>
+    <Group ID="Monitor">
+      <Group ID="0">
+        <Property ID="pv" Value="::VisuCtrl:SpeedInRPM" />
+      </Group>
     </Group>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>

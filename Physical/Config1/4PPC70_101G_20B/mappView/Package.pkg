@@ -9,5 +9,9 @@
     <Object Type="File">ParameterContent.binding</Object>
     <Object Type="File">HomeContent.binding</Object>
     <Object Type="File">UserContent.eventbinding</Object>
+    <Object Type="File">NavigationContent.eventbinding</Object>
+    <Object Type="File">FooterContent.binding</Object>
+    <Object Type="File">EventContent.binding</Object>
+    <Object Type="File">HomeContent.eventbinding</Object>
   </Objects>
 </Package>

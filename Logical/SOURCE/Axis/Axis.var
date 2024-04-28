@@ -7,7 +7,7 @@ VAR CONSTANT
 	SlaveOffsetSingle : INT := 0;
 	MasterOffsetSingle : INT := 0;
 	MUpPositionDouble : INT := 825;
-	SPositionDouble : INT := 2250;
+	SPositionDouble : INT := 2225;
 	MDownPositionDouble : INT := 2625;
 	MasterUpOffsetDouble : INT := 825;
 	MasterDownOffsetDouble : INT := 2625;
@@ -24,4 +24,9 @@ VAR CONSTANT
 	MCutRegionPosLimit2 : INT := 3599;
 	MCutRegionPosLimit3 : INT := 1;
 	MCutRegionNegLimit3 : INT := 150;
+	RunDeceleration : UDINT := 72000;
+	RunAcceleration : UDINT := 72000;
+	HomeAcceleration : UDINT := 3600;
+	HomeVelocity : UDINT := 720;
+	JogVelocity : UDINT := 7200;
 END_VAR

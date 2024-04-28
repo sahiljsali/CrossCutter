@@ -11,5 +11,6 @@
     <Object Type="Package">SOURCE</Object>
     <Object Type="Package">mappView</Object>
     <Object Type="File">Project.language</Object>
+    <Object Type="File">Audit.tmx</Object>
   </Objects>
 </Package>

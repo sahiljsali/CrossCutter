@@ -9,5 +9,9 @@
     <Object Type="File">black.svg</Object>
     <Object Type="File">orange.svg</Object>
     <Object Type="File">empty-can-2-svgrepo-com.svg</Object>
+    <Object Type="File">AlarmRed.svg</Object>
+    <Object Type="File">Home.png</Object>
+    <Object Type="File">GreenLED.png</Object>
+    <Object Type="File">RedLED.png</Object>
   </Objects>
 </Package>

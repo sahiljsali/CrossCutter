@@ -1,3 +1,4 @@
 VAR
 	Main : Main_typ;
+	MachineStatus : STRING[80];
 END_VAR

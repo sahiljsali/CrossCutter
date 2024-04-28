@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Audit</prop>
+  </header>
+  <body>
+    <tu tuid="Root">
+      <tuv xml:lang="fr">
+        <seg>fr: {&amp;evtime[TIME=%Y-%m-%d %H:%M]} {=$Audit/{&amp;ev}}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>de: {&amp;evtime[TIME=%Y-%m-%d %H:%M]} {=$Audit/{&amp;ev}}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>en: {&amp;evtime[TIME=%Y-%m-%d %H:%M]} {=$Audit/{&amp;ev}}</seg>
+      </tuv>
+      <tuv xml:lang="pa-IN">
+        <seg>pa: {&amp;evtime[TIME=%Y-%m-%d %H:%M]} {=$Audit/{&amp;ev}}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2" />
+    <tu tuid="16">
+      <tuv xml:lang="fr">
+        <seg>Value {&amp;old|.1f} Changed to {&amp;new|.2f} {&amp;new}  {&amp;new[UNIT= %n]}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Value {&amp;old|.1f} Changed to {&amp;new|.2f} {&amp;new} {&amp;new[UNIT= %n]}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Speed {&amp;old|.1f} RPM Changed to {&amp;new|.2f} RPM</seg>
+      </tuv>
+      <tuv xml:lang="pa-IN">
+        <seg>Lasī dā galāsa {&amp;new|.2f} bhara gi'ā</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

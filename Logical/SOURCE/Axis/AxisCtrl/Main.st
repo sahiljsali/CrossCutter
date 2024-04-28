@@ -1,35 +1,49 @@
-
+(*|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|*)
+(*| Copyright      :-  B&R Industrial Automation GmbH                                                            |*)
+(*| Contact Person :-   salis                                                                          		     |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| System       :-  Cross Cutter                                                                                |*)
+(*| Task Name    :-  AxisCtrl.st                                                                                 |*)
+(*| Auther Name  :-   salis                                                                                      |*)
+(*| Created Date :-  April 28, 2024/10:21 AM                                                                     |*)
+(*| AS Version   :-  AS 4.12.4.107 SP                                                                            |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| Description  :-  Axis Control Logic                               											 |*)
+(*|                                                                                                              |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| Version :-         V 1.0                      salis                                                          |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
 PROGRAM _INIT
-	(* Insert code here *)
-	MasterPara.Acceleration := 72000;
-	MasterPara.Deceleration := 72000;
+	(********************************* Axis Parameters ***************************************)
+	MasterPara.Acceleration := RunAcceleration;
+	MasterPara.Deceleration := RunDeceleration;
 	
 	
-	MasterPara.Home.StartVelocity := 720;
-	MasterPara.Home.HomingVelocity := 720;
-	MasterPara.Home.Acceleration := 3600;
+	MasterPara.Home.StartVelocity := HomeVelocity;
+	MasterPara.Home.HomingVelocity := HomeVelocity;
+	MasterPara.Home.Acceleration := HomeAcceleration;
 	MasterPara.Home.Mode := mpAXIS_HOME_MODE_DIRECT;
 	MasterPara.Home.ReferencePulse := mpAXIS_HOME_OPTION_ON;
 	
-	SlavePara.Acceleration := 72000;
-	SlavePara.Deceleration := 72000;
+	SlavePara.Acceleration := RunAcceleration;
+	SlavePara.Deceleration := RunDeceleration;
 	
-	SlavePara.Home.StartVelocity := 720;
-	SlavePara.Home.HomingVelocity := 720;
-	SlavePara.Home.Acceleration := 3600;
+	SlavePara.Home.StartVelocity := HomeVelocity;
+	SlavePara.Home.HomingVelocity := HomeVelocity;
+	SlavePara.Home.Acceleration := HomeAcceleration;
 	SlavePara.Home.Mode := mpAXIS_HOME_MODE_DIRECT;
 	SlavePara.Home.ReferencePulse := mpAXIS_HOME_OPTION_ON;
 	
-	SlavePara.Jog.Acceleration := 72000;
-	SlavePara.Jog.Deceleration := 72000;
-	SlavePara.Jog.Velocity := 7200;
+	SlavePara.Jog.Acceleration := RunAcceleration;
+	SlavePara.Jog.Deceleration := RunDeceleration;
+	SlavePara.Jog.Velocity := JogVelocity;
 
 	
 	
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	(* Insert code here *)
+	(********************************* Enable Function Block ***************************************)
 	
 	MpAxisMaster.MpLink := ADR(gML_Master);
 	MpAxisMaster.Enable := TRUE;
@@ -48,6 +62,8 @@ PROGRAM _CYCLIC
 	MpAxisCamSequencer_0.Enable := TRUE;
 	MpAxisCamSequencer_0.Parameters := ADR(CamSeqPara);
 	MpAxisCamSequencer_0();
+	
+	(********************************* State Machine for Power On and Run ***************************************)
 	
 	CASE PowerState OF
 		WAIT_CMD:
@@ -89,13 +105,15 @@ PROGRAM _CYCLIC
 			
 	END_CASE;
 	
+	(************************************ Selection of Mode ******************************************)
+	
 	IF Axis.Cmd.bSingleBlade THEN
 		SingleBladeCam;
 	ELSIF Axis.Cmd.bDoubleBlade THEN
 		DoubleBladeCam;
 	END_IF
 	
-	
+	(********************************* Logic for Homing Position ***************************************)
 	
 	IF (Axis.Cmd.bSingleBlade = FALSE) AND (Axis.Cmd.bDoubleBlade = FALSE) THEN
 		Axis.Cmd.bHome := FALSE;
@@ -176,11 +194,12 @@ PROGRAM _CYCLIC
 		
 	END_IF
 
+	(********************************* State Machine for Homing ***************************************)
 	
 	CASE AxisHomeState OF
 		WAIT:
 			IF (MpAxisMaster.Power = TRUE) AND (MpAxisSlave.Power = TRUE) THEN
-				IF Axis.Cmd.bHome THEN
+				IF Axis.Cmd.bHome AND (MpAxisMaster.InVelocity = FALSE) THEN
 					IF MpAxisMaster.IsHomed AND MpAxisSlave.IsHomed THEN
 						AxisHomeState := HOMING_ACTIVE;
 					ELSE
@@ -188,10 +207,6 @@ PROGRAM _CYCLIC
 					END_IF
 				END_IF
 			END_IF
-			
-			//			IF (MpAxisMaster.Error = TRUE) OR (MpAxisSlave.Error = TRUE) OR (MpAxisCamSequencer_0.Error = TRUE) THEN
-			//				AxisHomeState := ERROR;
-			//			END_IF
 			
 		HOME:
 			MpAxisCamSequencer_0.StartSequence := FALSE;
@@ -203,7 +218,6 @@ PROGRAM _CYCLIC
 			
 
 		HOMING_ACTIVE:
-			
 			MpAxisMaster.Home := FALSE;
 			MpAxisSlave.Home := FALSE;
 			MpAxisMaster.MoveAbsolute := TRUE;
@@ -243,6 +257,7 @@ PROGRAM _CYCLIC
 			AxisHomeState := WAIT;
 	END_CASE;
 	
+	(********************************* Logic for Auto InSync after error reset ***************************************)
 	
 	IF (MpAxisMaster.Error = FALSE) AND (MpAxisSlave.Error = FALSE) AND (MpAxisCamSequencer_0.Error = FALSE) THEN
 		CASE SequenceState OF
@@ -264,6 +279,8 @@ PROGRAM _CYCLIC
 				
 		END_CASE		
 	END_IF
+	
+	(********************************* State Machine for Error handling ***************************************)
 	
 	CASE EStopState OF
 		ESTOP_DETECT:
@@ -309,10 +326,13 @@ PROGRAM _CYCLIC
 			IF MpAxisMaster.Info.ReadyToPowerOn AND MpAxisSlave.Info.ReadyToPowerOn THEN
 				MpAxisMaster.Power := TRUE;
 				MpAxisSlave.Power := TRUE;
+				MachineStatus := 'ERROR RESET DONE - HOMING REQUIRE';
 				EStopState := ESTOP_DETECT;
 			END_IF		
 	END_CASE;
 
+	(********************************* State Machine for Update Speed ***************************************)
+	
 	CASE UpdateState OF
 		CHECK_UPDATE:
 			IF Axis.Para.gMachineSpeed <> Axis.Para.gNewMachineSpeed THEN
@@ -337,16 +357,11 @@ PROGRAM _CYCLIC
 	
 	Axis.Para.gMachineSpeed := LIMIT(0.0,Axis.Para.gMachineSpeed,18000.0);
 	
-	IF MpAxisSlave.InVelocity THEN
-		Axis.Cmd.bJogPositive := FALSE;
-		Axis.Cmd.bJogNegative := FALSE;
-	END_IF
-	
-	
+	(********************************* State Machine for Jog ***************************************)
 	
 	CASE JogState OF
 		WAIT_JOG:
-			IF Axis.Cmd.bJogPositive THEN
+			IF Axis.Cmd.bJogPositive AND (MpAxisMaster.InVelocity = FALSE) THEN
 				JogState := JOG_POSITIVE;
 			ELSIF Axis.Cmd.bJogNegative THEN
 				JogState := JOG_NEGATIVE;
@@ -381,8 +396,19 @@ PROGRAM _CYCLIC
 				JogState := WAIT_JOG;
 			END_IF
 	END_CASE
-
 	
+	(********************************* Logic for Interlocks ***************************************)
+
+	IF MpAxisSlave.InVelocity THEN
+		Axis.Cmd.bJogPositive := FALSE;
+		Axis.Cmd.bJogNegative := FALSE;
+	END_IF
+	
+	IF MpAxisMaster.InVelocity AND MpAxisCamSequencer_0.InSync THEN
+		Axis.Cmd.bHome := FALSE;
+		Axis.Cmd.bJogPositive := FALSE;
+		Axis.Cmd.bJogNegative := FALSE;
+	END_IF
 END_PROGRAM
 
 PROGRAM _EXIT

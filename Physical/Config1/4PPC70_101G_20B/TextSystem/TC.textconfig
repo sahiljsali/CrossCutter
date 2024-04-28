@@ -13,6 +13,10 @@
     </Group>
     <Group ID="TargetFiles">
       <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.MainTMX.tmx" />
+      <Property ID="TargetFile[2]" Value="Audit.tmx" />
+      <Property ID="TargetFile[3]" Value="Libraries.MpAudit.TxtEvent.tmx" />
+      <Property ID="TargetFile[4]" Value="Libraries.MpAudit.TxtUser.tmx" />
+      <Property ID="TargetFile[5]" Value="Libraries.MpAudit.TxtCustom.tmx" />
     </Group>
   </Element>
 </Configuration>

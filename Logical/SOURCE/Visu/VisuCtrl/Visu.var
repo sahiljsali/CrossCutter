@@ -12,6 +12,8 @@ VAR
 	MaxSCurrent : REAL;
 	SMotorTemp : REAL;
 	ACLineVoltage : REAL;
+	ACLineVoltage_1ph : REAL;
+	MSpeedRPM : REAL;
 	MC_BR_CyclicRead_0 : MC_BR_CyclicRead;
 	MC_BR_CyclicRead_1 : MC_BR_CyclicRead;
 	MC_BR_CyclicRead_2 : MC_BR_CyclicRead;
@@ -19,6 +21,8 @@ VAR
 	MC_BR_CyclicRead_4 : MC_BR_CyclicRead;
 	MC_BR_CyclicRead_5 : MC_BR_CyclicRead;
 	MC_BR_CyclicRead_6 : MC_BR_CyclicRead;
-	ACLineVoltage_1ph : REAL;
-	MSpeedRPM : REAL;
+	ErrorActive : BOOL;
+	HomeRed : BOOL;
+	HomeReferenced : BOOL;
+	HomeGreen : BOOL;
 END_VAR

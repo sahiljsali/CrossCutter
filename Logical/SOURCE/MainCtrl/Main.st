@@ -1,13 +1,29 @@
-
+(*|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|*)
+(*| Copyright      :-  B&R Industrial Automation GmbH                                                            |*)
+(*| Contact Person :-   salis                                                                          		     |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| System       :-  Cross Cutter                                                                                |*)
+(*| Task Name    :-  MainCtrl.st                                                                                 |*)
+(*| Auther Name  :-   salis                                                                                      |*)
+(*| Created Date :-  April 28, 2024/10:21 AM                                                                     |*)
+(*| AS Version   :-  AS 4.12.4.107 SP                                                                            |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| Description  :-  Main Control and Mode Selection Logic                                                       |*)
+(*|                                                                                                              |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
+(*| Version :-         V 1.0                      salis                                                          |*)
+(*|——————————————————————————————————————————————————————————————————————————————————————————————————————————————|*)
 PROGRAM _INIT
-	(* Insert code here *)
+	
 	 
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	(* Insert code here *)
+	(********************************* State Machine for Main Control and Mode Selection ***************************************)
+
 	CASE MainState OF
 		WAIT:
+			
 			IF Main.Cmd.bStart THEN
 				MainState := SELECT_MODE;
 			END_IF
@@ -48,7 +64,7 @@ PROGRAM _CYCLIC
 END_PROGRAM
 
 PROGRAM _EXIT
-	(* Insert code here *)
+	
 	 
 END_PROGRAM
 

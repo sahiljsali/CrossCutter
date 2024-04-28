@@ -10,8 +10,8 @@
     </Widget>
     <Widget xsi:type="widgets.brease.Login" id="Login1" top="32" left="12" width="268" height="148" zIndex="1" />
     <Widget xsi:type="widgets.brease.LogoutButton" id="LogoutButton" top="116" left="36" width="92" zIndex="2" text="Logout" />
-    <Widget xsi:type="widgets.brease.Button" id="AddBtn" top="140" left="372" zIndex="3" text="$IAT/Main/40" />
-    <Widget xsi:type="widgets.brease.Button" id="ModifyBTn" top="140" left="528" zIndex="4" text="$IAT/Main/42" />
-    <Widget xsi:type="widgets.brease.Button" id="DeleteBTN" top="140" left="684" zIndex="5" text="$IAT/Main/41" />
+    <Widget xsi:type="widgets.brease.Button" id="AddBtn" top="140" left="372" zIndex="3" image="Media/SymbolLib/User/AddUser.svg" text="$IAT/Main/40" />
+    <Widget xsi:type="widgets.brease.Button" id="ModifyBTn" top="140" left="500" width="140" zIndex="4" image="Media/SymbolLib/Edit/Edit.svg" text="$IAT/Main/42" />
+    <Widget xsi:type="widgets.brease.Button" id="DeleteBTN" top="140" left="660" width="120" zIndex="5" image="Media/SymbolLib/User/DeleteUser.svg" text="$IAT/Main/41" />
   </Widgets>
 </Content>

@@ -46,6 +46,7 @@
             <Variable Name="bSingleBlade" />
           </Variable>
         </Variable>
+        <Variable Name="MachineStatus" />
       </GlobalVariables>
       <Task Name="VisuCtrl">
         <Variable Name="ACLineVoltage" />
@@ -58,7 +59,12 @@
         <Variable Name="SpeedInRPM" />
         <Variable Name="STorque" />
         <Variable Name="MSpeedRPM" />
+        <Variable Name="ErrorActive" />
+        <Variable Name="HomeGreen" />
+        <Variable Name="HomeRed" />
+        <Variable Name="HomeReferenced" />
       </Task>
+      <Task Name="Audit" />
     </Module>
   </DefaultView>
 </OpcUaSource>

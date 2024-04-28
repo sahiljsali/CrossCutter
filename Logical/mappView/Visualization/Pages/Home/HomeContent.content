@@ -1,41 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="HomeContent" height="621" width="800" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="LabelMachineStatus" top="40" left="40" width="140" zIndex="0" text="$IAT/Main/39" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="StatusLabel" top="40" left="180" width="500" zIndex="1" backColor="rgba(255, 228, 196, 1)" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelMachineStatus" top="20" left="40" width="140" zIndex="0" text="$IAT/Main/39" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="StatusLabel" top="20" left="180" width="500" zIndex="1" backColor="rgba(255, 228, 196, 1)" textAlign="center" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="StartMachine" top="0" left="720" width="80" height="60" zIndex="2" image="Media/SymbolLib/Symbols/On.svg" />
-    <Widget xsi:type="widgets.brease.Label" id="ModeLabel" top="260" left="60" zIndex="3" text="Mode" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="4" x1="180" x2="180" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="5" x1="20" x2="180" y1="500" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="6" x1="180" x2="20" y1="240" y2="240" />
-    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="7" x1="20" x2="20" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Label" id="JogLabel" top="260" left="440" width="120" zIndex="8" text="Jog Slave" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="JogButton" top="320" left="440" width="120" height="60" zIndex="9" text="Jog" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="StopJogButton" top="420" left="440" width="120" height="60" zIndex="10" text="Stop" />
-    <Widget xsi:type="widgets.brease.Line" id="Line5" zIndex="11" x1="420" x2="580" y1="240" y2="240" />
-    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="12" x1="580" x2="580" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line7" zIndex="13" x1="420" x2="580" y1="500" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line8" zIndex="14" x1="420" x2="420" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="HomingButton" top="120" left="340" width="160" height="60" zIndex="15" text="Start Homing" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="RunButton" top="320" left="240" width="120" height="60" zIndex="16" text="Run" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="StopRunbutton" top="420" left="240" width="120" height="60" zIndex="17" text="Stop" />
-    <Widget xsi:type="widgets.brease.Label" id="RunLabel" top="260" left="240" width="120" zIndex="18" text="Run Machine" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.Line" id="Line9" zIndex="19" x1="220" x2="380" y1="240" y2="240" />
-    <Widget xsi:type="widgets.brease.Line" id="Line10" zIndex="20" x1="380" x2="380" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line11" zIndex="21" x1="220" x2="220" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line12" zIndex="22" x1="220" x2="380" y1="500" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line13" zIndex="23" x1="620" x2="780" y1="240" y2="240" />
-    <Widget xsi:type="widgets.brease.Line" id="Line14" zIndex="24" x1="620" x2="620" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line15" zIndex="25" x1="780" x2="780" y1="240" y2="500" />
-    <Widget xsi:type="widgets.brease.Line" id="Line16" zIndex="26" x1="620" x2="780" y1="500" y2="500" />
-    <Widget xsi:type="widgets.brease.Label" id="AxisLabel" top="260" left="640" width="120" zIndex="27" text="Axis On/Off" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="AxisoffButton" top="320" left="640" width="120" height="60" zIndex="28" text="ON" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="AxisOffButton" top="420" left="640" width="120" height="60" zIndex="29" text="OFF" />
-    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="300" left="20" width="160" height="200" zIndex="30">
+    <Widget xsi:type="widgets.brease.Label" id="ModeLabel" top="80" left="520" width="100" zIndex="3" text="Mode" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="4" x1="720" x2="720" y1="80" y2="220" />
+    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="5" x1="420" x2="720" y1="220" y2="220" />
+    <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="6" x1="720" x2="420" y1="80" y2="80" />
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="7" x1="420" x2="420" y1="80" y2="220" />
+    <Widget xsi:type="widgets.brease.Label" id="JogLabel" top="280" left="340" width="120" zIndex="8" text="Jog Slave" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="JogButton" top="340" left="340" width="120" height="60" zIndex="9" text="Jog" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="StopJogButton" top="500" left="340" width="120" height="60" zIndex="10" text="Stop" />
+    <Widget xsi:type="widgets.brease.Line" id="Line5" zIndex="11" x1="320" x2="480" y1="260" y2="260" />
+    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="12" x1="480" x2="480" y1="260" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line7" zIndex="13" x1="320" x2="480" y1="580" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line8" zIndex="14" x1="320" x2="320" y1="260" y2="580" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="HomingButton" top="140" left="80" width="140" height="60" zIndex="15" text="Start Homing" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="RunButton" top="340" left="120" width="120" height="60" zIndex="16" text="Run" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="StopRunbutton" top="500" left="120" width="120" height="60" zIndex="17" text="Stop" />
+    <Widget xsi:type="widgets.brease.Label" id="RunLabel" top="280" left="120" width="120" zIndex="18" text="Run Machine" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Line" id="Line9" zIndex="19" x1="80" x2="280" y1="260" y2="260" />
+    <Widget xsi:type="widgets.brease.Line" id="Line10" zIndex="20" x1="280" x2="280" y1="260" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line11" zIndex="21" x1="80" x2="80" y1="260" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line12" zIndex="22" x1="80" x2="280" y1="580" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line13" zIndex="23" x1="560" x2="720" y1="260" y2="260" />
+    <Widget xsi:type="widgets.brease.Line" id="Line14" zIndex="24" x1="560" x2="560" y1="260" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line15" zIndex="25" x1="720" x2="720" y1="260" y2="580" />
+    <Widget xsi:type="widgets.brease.Line" id="Line16" zIndex="26" x1="560" x2="720" y1="580" y2="580" />
+    <Widget xsi:type="widgets.brease.Label" id="AxisLabel" top="280" left="580" width="120" zIndex="27" text="Axis On/Off" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="AxisoffButton" top="340" left="580" width="120" height="60" zIndex="28" text="ON" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="AxisOffButton" top="500" left="580" width="120" height="60" zIndex="29" text="OFF" />
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="120" left="420" width="300" height="100" zIndex="30">
       <Widgets>
-        <Widget xsi:type="widgets.brease.ToggleButton" id="DualBladeButton" top="120" left="20" width="120" height="60" zIndex="0" text="Dual Blade" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="DualBladeButton" top="20" left="160" width="120" height="60" zIndex="0" text="Dual Blade" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="SingleBladeModeButton" top="20" left="20" width="120" height="60" zIndex="1" text="Single Blade" />
       </Widgets>
     </Widget>
+    <Widget xsi:type="widgets.brease.Image" id="HomeReferImage" top="140" left="260" width="60" height="60" zIndex="31" image="Media/Home.png" backColor="rgba(50, 205, 50, 1)" imageColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Line" id="Line17" zIndex="32" x1="60" x2="360" y1="80" y2="80" />
+    <Widget xsi:type="widgets.brease.Line" id="Line18" zIndex="33" x1="360" x2="360" y1="80" y2="220" />
+    <Widget xsi:type="widgets.brease.Line" id="Line19" zIndex="34" x1="60" x2="60" y1="80" y2="220" />
+    <Widget xsi:type="widgets.brease.Line" id="Line20" zIndex="35" x1="60" x2="360" y1="220" y2="220" />
+    <Widget xsi:type="widgets.brease.Image" id="HomeGreenImage" top="140" left="260" width="60" height="60" zIndex="36" image="Media/green.svg" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Image" id="NotHomedImage" top="140" left="260" width="60" height="60" zIndex="37" image="Media/red.svg" />
+    <Widget xsi:type="widgets.brease.Label" id="HomeLabel" top="80" left="160" width="100" zIndex="38" text="Home" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Image" id="RunRedImage" top="420" left="180" width="60" height="60" zIndex="39" image="Media/RedLED.png" rotation="0deg" />
+    <Widget xsi:type="widgets.brease.Image" id="JogRedImage" top="420" left="400" width="60" height="60" zIndex="40" image="Media/RedLED.png" />
+    <Widget xsi:type="widgets.brease.Image" id="PowerRed" top="420" left="640" width="60" height="60" zIndex="41" image="Media/RedLED.png" />
+    <Widget xsi:type="widgets.brease.Image" id="JogGreenLED" top="420" left="340" width="60" height="60" zIndex="42" image="Media/GreenLED.png" />
+    <Widget xsi:type="widgets.brease.Image" id="RunGreenLED" top="420" left="120" width="60" height="60" zIndex="43" image="Media/GreenLED.png" />
+    <Widget xsi:type="widgets.brease.Image" id="PowerGreenLED" top="420" left="580" width="60" height="60" zIndex="44" image="Media/GreenLED.png" />
   </Widgets>
 </Content>

@@ -18,7 +18,7 @@
     <Widget xsi:type="widgets.brease.Label" id="MachOutParLabel" top="20" left="120" width="220" zIndex="14" text="Machine Output Parameter" borderWidth="3px" borderStyle="solid" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label9" top="0" left="40" width="400" height="620" zIndex="15" text="" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" borderStyle="dashed" />
     <Widget xsi:type="widgets.brease.Label" id="MachInParLabel" top="20" left="520" width="220" zIndex="16" text="Machine Input Parameter" borderWidth="3px" borderStyle="solid" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="MachInSpeedInput" top="260" left="560" width="140" height="40" zIndex="17" maxValue="200" unit="{'metric':'RPM','imperial':'RPM','imperial-us':'RPM'}" unitAlign="right" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(85, 85, 85, 1)" activeTextColor="rgba(85, 85, 85, 1)" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="MachInSpeedInput" top="260" left="560" width="140" height="40" zIndex="17" maxValue="300" unit="{'metric':'RPM','imperial':'RPM','imperial-us':'RPM'}" unitAlign="right" backColor="rgba(255, 255, 255, 1)" borderColor="rgba(85, 85, 85, 1)" activeTextColor="rgba(85, 85, 85, 1)" textAlign="center" />
     <Widget xsi:type="widgets.brease.Label" id="SpeedInLabel" top="200" left="520" width="220" height="40" zIndex="18" text="Machine Speed Input (RPM)" borderWidth="2px" borderStyle="outset" textAlign="center" bold="true" />
   </Widgets>
 </Content>

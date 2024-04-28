@@ -8,5 +8,6 @@
     <Object Type="Package">User</Object>
     <Object Type="Package">Diagnostic</Object>
     <Object Type="Package">Parameter</Object>
+    <Object Type="Package">EventLog</Object>
   </Objects>
 </Package>
